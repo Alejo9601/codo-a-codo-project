@@ -11,8 +11,16 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.flex-container {
+.flex {
   display: flex;
+}
+
+.f-row-center {
+  justify-content: center;
+}
+
+.f-column-center {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -59,10 +67,49 @@ body {
 
 #banner-img-container {
   width: 100%;
-  height: 500px;
+  height: 700px;
 }
 
 #banner-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Sections*/
+.section-content {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #ff5063;
+  padding: 50px 0px;
+}
+
+.quick-access-products {
+  display: flex;
+  width: 70%;
+  height: 450px;
+  align-items: center;
+  background-color: bisque;
+}
+
+.quick-access-products__right {
+  width: 60%;
+}
+
+.quick-access-products__left {
+  width: 40%;
+}
+
+.quick-access-products__right {
+  background-color: #ff5063;
+}
+
+.quick-access-products__left {
+  background-color: chartreuse;
+}
+
+.quick-access-products__left img {
   height: 100%;
   width: 100%;
   object-fit: cover;
