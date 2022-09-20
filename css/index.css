@@ -45,7 +45,9 @@ body {
 
 .navbar {
   width: 100%;
-  overflow: visible;
+}
+
+.navbar#header-navbar {
   background-color: #3c43a4;
 }
 
@@ -94,16 +96,29 @@ body {
   width: 1170px;
   height: 455px;
   align-items: center;
-  background-color: bisque;
 }
 
 .quick-access-products__right {
   width: 100%;
+  align-self: flex-start;
 }
 
 .quick-access-products__right ul {
   display: flex;
   list-style: none;
+  justify-content: center;
+}
+
+.quick-access-products__right li span {
+  display: block;
+  font-size: 1.2rem;
+  padding: 20px 30px;
+}
+
+.quick-access-products__right li span:hover {
+  background-color: #3c43a4;
+  color: white;
+  cursor: pointer;
 }
 
 .quick-access-products__left {
