@@ -28,6 +28,31 @@ body {
   list-style: none;
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/** Product card **/
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card button {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #717171;
+  padding: 7px 21px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /** Styles for header, this properties will be the same in all pages 
     since header is present on each one of them.
 **/
