@@ -19,8 +19,9 @@
 
 .quick-access-products {
   display: flex;
-  width: 1170px;
+  width: 1140px;
   height: 455px;
+  padding: 0px 15px;
   align-items: center;
 }
 
