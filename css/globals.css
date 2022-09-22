@@ -16,6 +16,18 @@ body {
   min-height: 100vh;
 }
 
+/** Styles for banner
+    Can change it´s properties depending on the page it is used
+**/
+.banner {
+  width: 100%;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
 /** Styles for header, this properties will be the same in all pages 
     since header is present on each one of them.
 **/
@@ -37,18 +49,18 @@ body {
   background-color: #3c43a4;
 }
 
-.menu-list {
-  display: flex;
-  list-style: none;
-}
-
 .menu-list--header {
   padding: 20px 0px;
 }
 
-/** Styles for banner
-    Can change it´s properties depending on the page it is used
-**/
-.banner {
-  width: 100%;
+.menu-item-header a {
+  padding: 20px 30px;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: white;
+}
+
+.menu-item-header:hover a {
+  color: #ff5063;
+  cursor: pointer;
 }
