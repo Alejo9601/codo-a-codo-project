@@ -28,12 +28,6 @@ body {
   list-style: none;
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /** Product card **/
 .product-card {
   display: flex;

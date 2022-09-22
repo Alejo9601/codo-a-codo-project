@@ -10,6 +10,7 @@
 }
 
 /*Sections*/
+/** Quick access products **/
 .section-content {
   display: flex;
   justify-content: center;
@@ -59,6 +60,23 @@
   height: 455px;
   width: 455px;
   object-fit: cover;
+}
+
+.grid-products {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.product-card--sm {
+  width: 196px;
+  height: 361px;
+}
+
+.product-card--sm img {
+  width: 100%;
+  height: 222px;
 }
 
 /** Agile info section**/
