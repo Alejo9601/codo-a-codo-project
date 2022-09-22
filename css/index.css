@@ -78,3 +78,31 @@
   width: 100%;
   object-fit: cover;
 }
+
+/** Special Deals Section **/
+.specialdeals {
+  width: 1140px;
+  padding: 0px 15px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+}
+
+.specialdeals__left {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+.specialdeals__left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.agile-real-experiences {
+  width: 100%;
+  background-color: #3c43a4;
+}
