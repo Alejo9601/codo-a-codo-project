@@ -82,24 +82,18 @@
 /** Special Deals Section **/
 .specialdeals {
   width: 1140px;
+  height: 600px;
   padding: 0px 15px;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 30px;
-}
-
-.specialdeals__left {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
 }
 
-.specialdeals__left img {
+.specialdeals #img-span2 {
   height: 100%;
-  width: 100%;
-  object-fit: cover;
+  width: auto;
+  grid-row: span 2;
 }
 
 .agile-real-experiences {
