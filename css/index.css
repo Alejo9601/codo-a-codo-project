@@ -56,3 +56,25 @@
   width: 455px;
   object-fit: cover;
 }
+
+/** Agile info section**/
+.agileinfo {
+  height: 400px;
+  width: 100%;
+  display: flex;
+}
+
+.agileinfo__left {
+  width: 60%;
+}
+
+.agileinfo__right {
+  width: 40%;
+}
+
+.agileinfo__left img,
+.agileinfo__right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
