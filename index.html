@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fictious-Commerce</title>
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/globals.css" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
-    <header class="flex header">
-        <div class="flex" id="top-header">
-            <div class="flex" id="logo-container">
-                <h1 class="h1-logo">login</h1> 
+    <header class="header">
+        <div class="header-container header-container--top">
+            <div class="login">
+                <h1>login</h1> 
             </div>
-            <div class="flex" id="logo-container">
-                <h1 class="h1-logo">Electronic Store</h1>
+            <div class="logo">
+                <h1>Electronic Store</h1>
                 <p>Your store, Your place</p>
             </div>
-            <div class="flex" id="logo-container">
-                <h1 class="h1-logo">carrito</h1>
+            <div class="carrito">
+                <h1>carrito</h1>
             </div>
         </div>
         <!-- NAVIGATION BAR -->
-        <nav class="flex f-row-center navbar" id="header-navbar">
-            <ul class="flex menu-list">
-                <li class="menu-item">
-                    <a>HOME</a>
-                </li> 
-                <li class="menu-item">
-                    <a>PRODUCTOS</a>
-                </li>
-                <li class="menu-item">
-                    <a>ACERCA DE</a>
-                </li >
-                <li class="menu-item">
-                    <a>CONTACTO</a>
-                </li >
-            </ul>
-        </nav>
+        <div class="header-container header-container--bottom">
+            <nav class="navbar">
+                <ul class="menu-list menu-list--header">
+                    <li class="menu-item">
+                        <a>HOME</a>
+                    </li> 
+                    <li class="menu-item">
+                        <a>PRODUCTOS</a>
+                    </li>
+                    <li class="menu-item">
+                        <a>ACERCA DE</a>
+                    </li >
+                    <li class="menu-item">
+                        <a>CONTACTO</a>
+                    </li >
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- HOME BANNER -->
-    <section class="banner">
-        <div class="container" id="banner-img-container">
+    <section class="banner banner--home">
+        <div class="img-container img-container--banner">
             <img src="public/banner1.jpg"/>
         </div>
     </section>
@@ -55,18 +58,21 @@
                 </div>
                 <div class="quick-access-products__right">
                     <nav class="navbar"> 
-                        <ul class="navbar__menu-list">
-                            <li class="navbar__menu-item">
-                                <span>Cellphones</span>
+                        <ul class="menu-list menu-list--quick-access-products">
+                            <li class="menu-list__item active">
+                                <span>MOBILES</span>
                             </li> 
-                            <li class="navbar__menu-item">
-                                <span>Cameras</span>
+                            <li class="menu-list__item">
+                                <span>AUDIO</span>
                             </li>
-                            <li class="navbar__menu-item">
-                                <span>Otro</span>
+                            <li class="menu-list__item">
+                                <span>COMPUTER</span>
                             </li >
-                            <li class="navbar__menu-item">
-                                <span>Otro</span>
+                            <li class="menu-list__item">
+                                <span>HOUSEHOLD</span>
+                            </li >
+                            <li class="menu-list__item">
+                                <span>KITCHEN</span>
                             </li >
                         </ul>
                     </nav>
