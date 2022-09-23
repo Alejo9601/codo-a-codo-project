@@ -103,6 +103,9 @@
 }
 
 .agileinfo__description {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   position: absolute;
   top: 25%;
   right: 5%;
@@ -129,6 +132,22 @@
 
 .agileinfo__description h3 span i {
   color: black;
+}
+
+.agileinfo a {
+  margin-top: 40px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--color-crimson);
+  background: url(../public/arrow.png) no-repeat 108px -7px;
+  padding: 0 45px 0 0;
+  transition: background 1s ease;
+}
+
+.agileinfo a:hover {
+  color: black;
+  background: url(../public/arrow.png) no-repeat 108px -40px;
 }
 
 /** Special Deals Section **/
