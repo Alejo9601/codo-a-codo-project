@@ -218,10 +218,10 @@
   align-items: center;
   font-size: 1.3rem;
   font-weight: lighter;
+  line-height: 1.1;
 }
 
 .rounded-container--specialdeals h5 span {
-  font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
