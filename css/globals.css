@@ -47,6 +47,29 @@ body {
   cursor: pointer;
 }
 
+.product-description h5 {
+  font-size: 1.1rem;
+  color: #ff5063;
+}
+
+.product-description p {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+.product-description p span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product-description p i {
+  color: white;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
 /** Styles for header, this properties will be the same in all pages 
     since header is present on each one of them.
 **/
