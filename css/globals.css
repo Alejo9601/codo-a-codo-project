@@ -83,3 +83,21 @@ body {
   color: #ff5063;
   cursor: pointer;
 }
+
+.login {
+  padding: 16px 24px;
+  border: 1px solid #3c43a4;
+  transition: border-radius 0.5s ease;
+  cursor: pointer;
+}
+
+.login span::before {
+  content: "Login";
+  font-weight: 500;
+}
+
+.login:hover {
+  border-radius: 15px;
+  background-color: #3c43a4;
+  color: white;
+}
