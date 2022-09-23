@@ -16,6 +16,15 @@ body {
   min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Glegoo", serif;
+}
+
 :root {
   --color-cream: #f3f3f3;
   --color-crimson: #ff5063;
