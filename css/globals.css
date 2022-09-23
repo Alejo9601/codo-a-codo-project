@@ -16,6 +16,12 @@ body {
   min-height: 100vh;
 }
 
+:root {
+  --color-cream: #f3f3f3;
+  --color-crimson: #ff5063;
+  --color-purple: #3c43a4;
+}
+
 /** Styles for banner
     Can change it´s properties depending on the page it is used
 **/
@@ -64,7 +70,7 @@ body {
 }
 
 .product-description p i {
-  color: white;
+  color: black;
   font-size: 1.1rem;
   font-style: normal;
   font-weight: bold;
