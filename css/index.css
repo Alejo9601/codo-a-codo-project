@@ -194,6 +194,7 @@
 }
 
 .img-container--specialdeals-right {
+  position: relative;
   height: 100%;
   grid-row: span 2;
 }
@@ -228,6 +229,39 @@
 .agile-real-experiences {
   width: 100%;
   background-color: var(--color-purple);
+}
+
+.img-container--specialdeals-right h3 {
+  position: absolute;
+  color: white;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  top: 5%;
+  right: 20%;
+}
+
+.img-container--specialdeals-right h3 span {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img-container--specialdeals-right h5 {
+  position: absolute;
+  color: var(--color-crimson);
+  font-size: 2.3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  top: 13%;
+  right: 20%;
+}
+
+.img-container--specialdeals-right h5 span {
+  color: white;
+  align-self: center;
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
 }
 
 /** New products section **/
