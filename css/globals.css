@@ -107,6 +107,18 @@ h6 {
   background-color: #3c43a4;
 }
 
+.logo h1 {
+  font-size: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo h1 span {
+  font-size: 0.7rem;
+  letter-spacing: 7px;
+}
+
 .menu-list--header {
   padding: 20px 0px;
 }
