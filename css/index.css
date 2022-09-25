@@ -10,7 +10,6 @@
 }
 
 /*Sections*/
-/** Quick access products **/
 .section-content {
   display: flex;
   justify-content: center;
@@ -21,18 +20,31 @@
   background-color: #f3f3f3;
 }
 
-.quick-access-products {
-  display: flex;
+.quick-access-products,
+.specialdeals,
+.newproducts {
   width: 1140px;
-  height: 455px;
   padding: 0px 15px;
-  align-items: center;
+}
+
+.quick-access-products,
+.agileinfo,
+.newsletter {
+  display: flex;
+}
+
+.specialdeals,
+.newproducts {
+  display: grid;
+}
+
+/** Quick access products - SECTION - **/
+.quick-access-products {
+  height: 455px;
 }
 
 .quick-access-products__right {
-  width: 100%;
   padding: 0px 15px;
-  align-self: flex-start;
 }
 
 .menu-list--quick-access-products {
@@ -79,11 +91,10 @@
   height: 222px;
 }
 
-/** Agile info section**/
+/** Agile info - SECTION -**/
 .agileinfo {
   height: 400px;
   width: 100%;
-  display: flex;
 }
 
 .agileinfo__left {
@@ -149,12 +160,9 @@
   background: url(../public/arrow.png) no-repeat 108px -40px;
 }
 
-/** Special Deals Section **/
+/** Special Deals - SECTION - **/
 .specialdeals {
-  width: 1140px;
   height: 600px;
-  padding: 0px 15px;
-  display: grid;
   grid-template-columns: 1.3fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
@@ -261,11 +269,8 @@
   font-weight: 300;
 }
 
-/** New products section **/
+/** New products - SECTION - **/
 .newproducts {
-  width: 1140;
-  padding: 0px 15px;
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
@@ -280,9 +285,8 @@
   height: 340px;
 }
 
-/** Newsletter **/
+/** Newsletter - SECTION - **/
 .newsletter {
-  display: flex;
   padding: 48px 0px;
   background-color: var(--color-purple);
   justify-content: space-evenly;
