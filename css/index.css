@@ -146,6 +146,7 @@
 }
 
 .agileinfo__right {
+  position: relative;
   width: 40%;
 }
 
@@ -203,6 +204,59 @@
   background: url(../public/arrow.png) no-repeat 150px -38px;
 }
 
+.agileinfo__countdown {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.agileinfo__countdown h4 {
+  grid-column: span 4;
+  justify-self: center;
+  width: fit-content;
+  color: white;
+  background-color: #212121;
+  padding: 2px 10px;
+  border: 1px solid white;
+  margin-bottom: 15px;
+}
+
+.agileinfo__countdown .rounded-container {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.agileinfo__countdown .rounded-container span {
+  color: white;
+}
+
+.agileinfo__countdown .rounded-container .left-digit {
+  width: 50%;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  text-align: end;
+}
+.agileinfo__countdown .rounded-container .right-digit {
+  width: 50%;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  text-align: start;
+}
+
+.agileinfo__countdown .rounded-container .count-of {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+}
+
 /** Special Deals - SECTION - **/
 .specialdeals {
   height: 600px;
@@ -256,8 +310,6 @@
 
 .rounded-container--specialdeals {
   position: absolute;
-  background-color: var(--color-purple);
-  border-radius: 50%;
   width: 100px;
   height: 100px;
   top: 5%;

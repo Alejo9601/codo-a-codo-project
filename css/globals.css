@@ -43,6 +43,11 @@ h6 {
   list-style: none;
 }
 
+.rounded-container {
+  border-radius: 50%;
+  background-color: var(--color-purple);
+}
+
 /** Product card **/
 .product-card {
   display: flex;
