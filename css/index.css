@@ -102,6 +102,10 @@
   color: white;
 }
 
+.tabmenu-item__clickable:hover {
+  color: rgb(119, 153, 205);
+}
+
 .quick-access-products__left {
   padding: 0px 15px;
 }
