@@ -192,14 +192,14 @@
   font-size: 1.1rem;
   letter-spacing: 2px;
   color: var(--color-crimson);
-  background: url(../public/arrow.png) no-repeat 108px -7px;
+  background: url(../public/arrow.png) no-repeat 150px -5px;
   padding: 0 45px 0 0;
   transition: background 1s ease;
 }
 
 .agileinfo a:hover {
   color: black;
-  background: url(../public/arrow.png) no-repeat 108px -40px;
+  background: url(../public/arrow.png) no-repeat 150px -38px;
 }
 
 /** Special Deals - SECTION - **/
