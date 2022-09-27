@@ -362,7 +362,8 @@
 }
 
 .newsletter__form-right input {
-  width: 378px;
+  width: 340px;
+  padding: 0px 20px;
 }
 
 .newsletter__form-right button {
