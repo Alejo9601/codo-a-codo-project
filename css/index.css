@@ -80,19 +80,24 @@
   padding: 0px 15px;
 }
 
-.menu-list--quick-access-products {
+.tabmenu--product-categories {
   justify-content: flex-start;
+  display: flex;
+  list-style: none;
 }
 
-.menu-item-tabproducts {
-  display: block;
-  font-size: 1.2rem;
-  padding: 10px 15px;
+.tabmenu-item {
   border-bottom: 1px solid var(--color-purple);
   cursor: pointer;
 }
 
-.menu-item-tabproducts.active {
+.tabmenu-item__clickable {
+  display: block;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+.tabmenu-item.active .tabmenu-item__clickable {
   background-color: var(--color-purple);
   color: white;
 }
