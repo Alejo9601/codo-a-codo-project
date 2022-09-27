@@ -55,7 +55,8 @@
 
 .quick-access-products,
 .specialdeals,
-.newproducts {
+.newproducts,
+.newsletter {
   width: 1140px;
   padding: 0px 15px;
 }
@@ -328,22 +329,43 @@
 }
 
 /** Newsletter - SECTION - **/
-.newsletter {
+.section-content--newsletter {
   padding: 48px 0px;
   background-color: var(--color-purple);
-  justify-content: space-evenly;
 }
 
-.newsletter h3 {
+.newsletter {
+  background-color: var(--color-purple);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter__left h3 {
   font-size: 2rem;
   color: white;
 }
 
-.newsletter p {
+.newsletter__left p {
   color: #bfbfbf;
 }
 
-.newsletter input {
-  width: 378px;
+.newsletter__form-right {
+  display: flex;
+  background-color: white;
+}
+
+.newsletter__form-right input,
+.newsletter__form-right button {
   height: 40px;
+  outline: none;
+  border: 0px;
+}
+
+.newsletter__form-right input {
+  width: 378px;
+}
+
+.newsletter__form-right button {
+  background: url(../public/arrow.png) no-repeat 20px -65px var(--color-crimson);
+  width: 70px;
 }
