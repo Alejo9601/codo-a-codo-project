@@ -18,7 +18,7 @@ const realExperiences = [
 
 const profileImg = document.querySelector(".rounded-container--profiles");
 const comment = document.querySelector(".card-carousel--profiles p");
-const paginationDots = document.querySelectorAll(".dot");
+const paginationDots = document.querySelectorAll(".card-carousel__dot");
 
 let arrayIndex = 0;
 
