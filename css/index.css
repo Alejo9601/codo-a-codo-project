@@ -385,11 +385,11 @@
   background-color: white;
 }
 
-.card-carousel___pagination {
+.card-carousel__pagination {
   display: flex;
 }
 
-.card-carousel___pagination span {
+.card-carousel__dot {
   border-radius: 50%;
   display: block;
   height: 10px;
@@ -398,7 +398,7 @@
   background-color: white;
 }
 
-.card-carousel___pagination span.actual-page {
+.card-carousel__dot.actual-page {
   background-color: black;
   box-shadow: 0px 0px 7px 0px black;
 }
