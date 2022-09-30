@@ -16,12 +16,13 @@ const realExperiences = [
   },
 ];
 
+//Getting elements from DOM
 const profileImg = document.querySelector(".rounded-container--profile");
 const comment = document.querySelector(".card-carousel--profiles p");
 const paginationDots = document.querySelectorAll(".card-carousel__dot");
 
+//This index will let me loop the array using an interval
 let arrayIndex = 0;
-
 setInterval(() => {
   profileImg.style.backgroundImage = `url(public/${realExperiences[arrayIndex].image})`;
   profileImg.style.backgroundSize = "cover";
@@ -34,6 +35,7 @@ setInterval(() => {
 
   paginationDots[arrayIndex].classList.add("actual-page");
 
+  //Will increment de index or restore it's value to 0
   arrayIndex < realExperiences.length - 1
     ? (arrayIndex += 1)
     : (arrayIndex = 0);
