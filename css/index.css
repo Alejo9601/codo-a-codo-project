@@ -206,8 +206,9 @@
 
 .agileinfo__countdown {
   position: absolute;
-  top: 30%;
-  right: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -255,6 +256,12 @@
   text-align: center;
   font-style: italic;
   font-weight: 600;
+}
+
+/**Media QUERYS**/
+@media (min-width: 1366px) {
+  .agileinfo__countdown {
+  }
 }
 
 /** Special Deals - SECTION - **/
