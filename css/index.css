@@ -72,6 +72,16 @@
   display: grid;
 }
 
+/**Media QUERYS**/
+@media (max-width: 1140px) {
+  .quick-access-products,
+  .specialdeals,
+  .newproducts,
+  .newsletter {
+    width: 970px;
+  }
+}
+
 /** Quick access products - SECTION - **/
 .quick-access-products {
   height: 455px;
@@ -132,6 +142,21 @@
 .product-card--sm img {
   width: 100%;
   height: 222px;
+}
+
+@media (max-width: 1140px) {
+  .product-card--sm {
+    width: 158px;
+    height: 317px;
+  }
+  .product-card--sm img {
+    width: 100%;
+    height: 179px;
+  }
+  .quick-access-products__left img {
+    height: 400px;
+    width: 400px;
+  }
 }
 
 /** Agile info - SECTION -**/
@@ -258,9 +283,19 @@
   font-weight: 600;
 }
 
-/**Media QUERYS**/
-@media (min-width: 1366px) {
-  .agileinfo__countdown {
+@media (max-width: 1140px) {
+  .agileinfo__description h3 span {
+    font-size: 2.3rem;
+  }
+  .agileinfo a {
+    font-size: 1rem;
+  }
+  .agileinfo__countdown .rounded-container {
+    width: 80px;
+    height: 80px;
+  }
+  .agileinfo__countdown .rounded-container .count-of {
+    font-size: 13px;
   }
 }
 
@@ -430,6 +465,16 @@
 .product-card--lg img {
   width: 100%;
   height: 340px;
+}
+
+@media (max-width: 1140px) {
+  .product-card--lg {
+    width: 205px;
+    height: 410px;
+  }
+  .product-card--lg img {
+    height: 273px;
+  }
 }
 
 /** Newsletter - SECTION - **/
