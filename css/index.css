@@ -79,6 +79,9 @@
   .newsletter {
     width: 970px;
   }
+  .section-content {
+    padding: 64px 0px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -88,6 +91,9 @@
   .newsletter {
     flex-direction: column;
     width: 750px;
+  }
+  .section-content {
+    padding: 48px 0px;
   }
 }
 
@@ -140,6 +146,7 @@
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   gap: 15px;
 }
 
@@ -172,6 +179,12 @@
 @media (max-width: 992px) {
   .quick-access-products {
     height: auto;
+  }
+  .quick-access-products__left img {
+    width: 100%;
+  }
+  .quick-access-products__right {
+    margin-top: 48px;
   }
 }
 
@@ -312,6 +325,17 @@
   }
   .agileinfo__countdown .rounded-container .count-of {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .agileinfo {
+    height: auto;
+  }
+  .agileinfo__left,
+  .agileinfo__right {
+    height: 335px;
+    width: 100%;
   }
 }
 
@@ -467,6 +491,33 @@
   box-shadow: 0px 0px 7px 0px black;
 }
 
+@media (max-width: 992px) {
+  .specialdeals {
+    height: auto;
+    width: 720px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    justify-items: center;
+  }
+  .img-container--specialdeals-right {
+    height: 600px;
+    width: 400px;
+    grid-row: span 2;
+  }
+  .img-container--specialdeals-right h3,
+  .img-container--specialdeals-right h5 {
+    right: 10%;
+  }
+  .img-container--specialdeals-left,
+  .img-container--specialdeals-left img {
+    width: 100%;
+  }
+  .agile-real-experiences {
+    height: 326px;
+  }
+}
+
 /** New products - SECTION - **/
 .newproducts {
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -545,4 +596,10 @@
   background: url(../public/arrow.png) no-repeat 20px -65px var(--color-crimson);
   width: 70px;
   cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .newsletter__form-right {
+    margin-top: 48px;
+  }
 }
