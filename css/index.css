@@ -72,7 +72,7 @@
   display: grid;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1170px) {
   .quick-access-products,
   .specialdeals,
   .newproducts,
@@ -154,7 +154,7 @@
   object-fit: contain;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1170px) {
   .product-card--sm {
     width: 158px;
     height: 317px;
@@ -299,7 +299,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1170px) {
   .agileinfo__description h3 span {
     font-size: 2.3rem;
   }
@@ -483,7 +483,7 @@
   height: 340px;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1170px) {
   .product-card--lg {
     width: 205px;
     height: 410px;
@@ -502,7 +502,6 @@
     height: 200px;
   }
 }
-
 
 /** Newsletter - SECTION - **/
 .section-content--newsletter {
