@@ -57,7 +57,7 @@
 .specialdeals,
 .newproducts,
 .newsletter {
-  width: 1140px;
+  width: 1170px;
   padding: 0px 15px;
 }
 
@@ -156,7 +156,7 @@
   }
   .quick-access-products__left img {
     height: 400px;
-    width: 400px;
+    width: 361px;
   }
 }
 
