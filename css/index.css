@@ -72,13 +72,22 @@
   display: grid;
 }
 
-/**Media QUERYS**/
 @media (max-width: 1140px) {
   .quick-access-products,
   .specialdeals,
   .newproducts,
   .newsletter {
     width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .quick-access-products,
+  .agileinfo,
+  .newproducts,
+  .newsletter {
+    flex-direction: column;
+    width: 750px;
   }
 }
 
@@ -157,6 +166,12 @@
   .quick-access-products__left img {
     height: 400px;
     width: 361px;
+  }
+}
+
+@media (max-width: 992px) {
+  .quick-access-products {
+    height: auto;
   }
 }
 
@@ -477,6 +492,17 @@
     height: 273px;
   }
 }
+
+@media (max-width: 992px) {
+  .product-card--lg {
+    width: 150px;
+    height: 337px;
+  }
+  .product-card--lg img {
+    height: 200px;
+  }
+}
+
 
 /** Newsletter - SECTION - **/
 .section-content--newsletter {
