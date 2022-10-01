@@ -177,6 +177,13 @@
 }
 
 @media (max-width: 992px) {
+  .product-card--sm {
+    width: 215px;
+    height: 381px;
+  }
+  .product-card--sm img {
+    height: 244px;
+  }
   .quick-access-products {
     height: auto;
   }
