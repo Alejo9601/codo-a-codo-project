@@ -1,13 +1,5 @@
-////API CALL//////////////////
+import {getProductsForCategory} from "./apiCalls.js"
 
-const getProductsForCategory = (category, limit = 100) => {
-  category = escape(category);
-  return fetch(
-    `https://fakestoreapi.com/products/category/${category}?limit=${limit}`
-  ).then((response) => response.json());
-};
-
-//////////////////////////////
 let electronicsProducts;
 let jeweleryProducts;
 let mensClothesProducts;
@@ -77,16 +69,15 @@ const handleTabClick = (clickedTab) => {
   });
 };
 
+const setTabController = ()=> {
+  getProducts().then(()=> {
 
-getProducts().then(()=> {
-
-  paintProducts("electronics")
-
-  tabMenuClickables.forEach((element) => {
-    element.addEventListener("click", handleTabClick);
+    paintProducts("electronics")
+  
+    tabMenuClickables.forEach((element) => {
+      element.addEventListener("click", handleTabClick);
+    });
   });
-});
+}
 
-
-
-
+export default setTabController

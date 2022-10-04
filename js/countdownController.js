@@ -74,6 +74,10 @@ const handleTimer = () => {
   }
 };
 
-setInterval(() => {
-  handleTimer();
-}, 1000);
+const startCountdown = () => {
+  setInterval(() => {
+    handleTimer();
+  }, 1000);  
+}
+
+export default startCountdown; 
