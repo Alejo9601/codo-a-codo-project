@@ -148,6 +148,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   gap: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .product-card--sm {
