@@ -2,24 +2,29 @@
 
 const getProductsForCategory = (category, limit = 100) => {
   category = escape(category);
-  console.log(category);
   return fetch(
     `https://fakestoreapi.com/products/category/${category}?limit=${limit}`
   ).then((response) => response.json());
 };
 
 //////////////////////////////
-const electronicsProducts = await getProductsForCategory("electronics", 3);
-const jeweleryProducts = getProductsForCategory("jewelery", 3);
-const mensClothesProducts = getProductsForCategory("men´s clothing", 3);
-const womensClothesProducts = getProductsForCategory("women´s clothing", 3);
+let electronicsProducts;
+let jeweleryProducts;
+let mensClothesProducts;
+let womensClothesProducts;
 
 const tabMenuClickables = document.querySelectorAll(".tabmenu-item__clickable");
 const productsImages = document.querySelectorAll(".product-card--sm img");
 const productsTitle = document.querySelectorAll(".product-card--sm h5");
 const productsPrices = document.querySelectorAll(".product-card--sm p i");
 
-//Paints products
+const getProducts = async () => {
+  electronicsProducts = await getProductsForCategory("electronics", 3);
+  jeweleryProducts = await getProductsForCategory("jewelery", 3);
+  mensClothesProducts = await getProductsForCategory("men's clothing", 3);
+  womensClothesProducts = await getProductsForCategory("women's clothing", 3);
+}
+
 const paintProducts = async (category) => {
   let products;
 
@@ -44,7 +49,7 @@ const paintProducts = async (category) => {
     productImg.src = products[index].image;
   });
   productsTitle.forEach((productTitle, index) => {
-    productTitle.textContent = products[index].slice(0, 25);
+    productTitle.textContent = products[index].title.slice(0, 25);
   });
   productsPrices.forEach((productPrices, index) => {
     productPrices.textContent = "$ " + products[index].price;
@@ -57,9 +62,6 @@ const makeActiveTab = (tab) => {
   });
   tab.target.parentElement.classList.add("active");
 };
-
-//First Paint
-paintProducts("electronics");
 
 //Will be executed when the user clicks on a tab element
 const handleTabClick = (clickedTab) => {
@@ -75,6 +77,16 @@ const handleTabClick = (clickedTab) => {
   });
 };
 
-tabMenuClickables.forEach((element) => {
-  element.addEventListener("click", handleTabClick);
+
+getProducts().then(()=> {
+
+  paintProducts("electronics")
+
+  tabMenuClickables.forEach((element) => {
+    element.addEventListener("click", handleTabClick);
+  });
 });
+
+
+
+
