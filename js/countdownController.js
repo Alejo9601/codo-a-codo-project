@@ -1,4 +1,4 @@
-const decrementOn = (firstEl, secondEl) => {
+const decrement = (firstEl, secondEl) => {
   let firstDigit = Number(firstEl.textContent);
   let secondDigit = Number(secondEl.textContent);
 
@@ -29,7 +29,7 @@ const decrementOneDay = () => {
     ".rounded-container--days :nth-child(2)"
   );
 
-  return decrementOn(firstEl, secondEl);
+  return decrement(firstEl, secondEl);
 };
 
 const decrementOneHour = () => {
@@ -40,7 +40,7 @@ const decrementOneHour = () => {
     ".rounded-container--hours :nth-child(2)"
   );
 
-  return decrementOn(firstEl, secondEl);
+  return decrement(firstEl, secondEl);
 };
 
 const decrementOneMinute = () => {
@@ -51,7 +51,7 @@ const decrementOneMinute = () => {
     ".rounded-container--minutes :nth-child(2)"
   );
 
-  return decrementOn(firstEl, secondEl);
+  return decrement(firstEl, secondEl);
 };
 
 const decrementOneSecond = () => {
@@ -61,7 +61,7 @@ const decrementOneSecond = () => {
   const secondEl = document.querySelector(
     ".rounded-container--seconds :nth-child(2)"
   );
-  return decrementOn(firstEl, secondEl);
+  return decrement(firstEl, secondEl);
 };
 
 const handleTimer = () => {
