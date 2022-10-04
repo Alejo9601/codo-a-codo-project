@@ -12,7 +12,6 @@ const decrementOn = (firstEl, secondEl) => {
   if (firstDigit >= 1) {
     secondEl.textContent = "9";
     firstDigit = firstDigit - 1;
-    console.log(firstDigit);
     firstEl.textContent = firstDigit.toString();
     return false;
   }
