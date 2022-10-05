@@ -54,7 +54,6 @@
 }
 
 .quick-access-products,
-.specialdeals,
 .newproducts,
 .newsletter {
   width: 1170px;
@@ -75,7 +74,6 @@
 
 @media (max-width: 1170px) {
   .quick-access-products,
-  .specialdeals,
   .newproducts,
   .newsletter {
     width: 970px;
@@ -88,7 +86,6 @@
 @media (max-width: 992px) {
   .quick-access-products,
   .agileinfo,
-  .specialdeals,
   .newproducts,
   .newsletter {
     flex-direction: column;
@@ -102,7 +99,6 @@
 @media (max-width: 760px) {
   .quick-access-products,
   .agileinfo,
-  .specialdeals,
   .newproducts,
   .newsletter {
     width: 631px;
@@ -377,15 +373,21 @@
 
 /** Special Deals - SECTION - **/
 .specialdeals {
-  height: 600px;
-  grid-template-columns: 1.3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 628px 400px;
+  grid-template-rows: 300px 300px;
   gap: 30px;
 }
 
 .img-container--specialdeals-left,
 .img-container--specialdeals-right {
   position: relative;
+}
+
+.img-container--specialdeals-left img,
+.img-container--specialdeals-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-container h3,
@@ -450,7 +452,6 @@
 }
 
 .agile-real-experiences {
-  width: 100%;
   background-color: var(--color-purple);
 }
 
@@ -483,7 +484,6 @@
 }
 
 .card-carousel--profiles {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -527,35 +527,25 @@
   box-shadow: 0px 0px 7px 0px black;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1170px) {
   .specialdeals {
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 30px;
-    justify-items: center;
-  }
-  .img-container--specialdeals-right {
-    height: 600px;
-    width: 400px;
-    grid-row: span 2;
-  }
-  .img-container--specialdeals-right h3,
-  .img-container--specialdeals-right h5 {
-    right: 10%;
-  }
-  .img-container--specialdeals-left,
-  .img-container--specialdeals-left img {
-    width: 100%;
-  }
-  .agile-real-experiences {
-    height: 326px;
+    grid-template-columns: 530px 350px;
+    grid-template-rows: 250px 250px;
   }
 }
 
-@media (max-width: 760px) {
-  .agile-real-experiences {
-    height: 266px;
+@media (max-width: 992px) {
+  .specialdeals {
+    height: auto;
+    grid-template-columns: 80vw;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+  }
+  .img-container--specialdeals-right {
+    grid-row: auto;
+  }
+  .card-carousel--profiles {
+    padding: 70px 50px;
   }
 }
 
