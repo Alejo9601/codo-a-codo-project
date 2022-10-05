@@ -43,6 +43,12 @@ h6 {
   list-style: none;
 }
 
+@media (max-width: 580px) {
+  .menu-list {
+    flex-direction: column;
+  }
+}
+
 .rounded-container {
   border-radius: 50%;
   background-color: var(--color-purple);
@@ -214,5 +220,12 @@ h6 {
 @media (max-width: 992px) {
   .icon-container--cart {
     right: 2%;
+  }
+}
+
+@media (max-width: 580px) {
+  .menu-item-header {
+    padding: 20px 30px;
+    text-align: center;
   }
 }
