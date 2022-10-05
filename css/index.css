@@ -107,7 +107,7 @@
   .agileinfo,
   .newproducts,
   .newsletter {
-    width: 631px;
+    width: 100%;
   }
   .section-content {
     padding: 32px 0px;
@@ -594,6 +594,7 @@
 @media (max-width: 760px) {
   .newproducts {
     grid-template-columns: 1fr 1fr;
+    gap: 30px 15px;
   }
   .product-card--lg {
     width: 267px;
