@@ -70,6 +70,7 @@
 .specialdeals,
 .newproducts {
   display: grid;
+  justify-items: center;
 }
 
 @media (max-width: 1170px) {
