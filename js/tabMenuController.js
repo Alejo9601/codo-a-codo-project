@@ -1,4 +1,4 @@
-import {getProductsForCategory} from "./apiCalls.js"
+import { getProductsForCategory } from "./apiCalls.js";
 
 let electronicsProducts;
 let jeweleryProducts;
@@ -15,7 +15,7 @@ const getProducts = async () => {
   jeweleryProducts = await getProductsForCategory("jewelery", 3);
   mensClothesProducts = await getProductsForCategory("men's clothing", 3);
   womensClothesProducts = await getProductsForCategory("women's clothing", 3);
-}
+};
 
 const paintProducts = async (category) => {
   let products;
@@ -69,15 +69,14 @@ const handleTabClick = (clickedTab) => {
   });
 };
 
-const setTabController = ()=> {
-  getProducts().then(()=> {
+const loadQuickAccessProducts = () => {
+  getProducts().then(() => {
+    paintProducts("electronics");
 
-    paintProducts("electronics")
-  
     tabMenuClickables.forEach((element) => {
       element.addEventListener("click", handleTabClick);
     });
   });
-}
+};
 
-export default setTabController
+export default loadQuickAccessProducts;
