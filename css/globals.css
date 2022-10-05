@@ -203,3 +203,15 @@ h6 {
   color: white;
   font-size: 32px;
 }
+
+@media (max-width: 1170px) {
+  .icon-container--cart {
+    right: 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .icon-container--cart {
+    right: 2%;
+  }
+}
