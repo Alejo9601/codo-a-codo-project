@@ -88,6 +88,7 @@
 @media (max-width: 992px) {
   .quick-access-products,
   .agileinfo,
+  .specialdeals,
   .newproducts,
   .newsletter {
     flex-direction: column;
@@ -95,6 +96,19 @@
   }
   .section-content {
     padding: 48px 0px;
+  }
+}
+
+@media (max-width: 760px) {
+  .quick-access-products,
+  .agileinfo,
+  .specialdeals,
+  .newproducts,
+  .newsletter {
+    width: 631px;
+  }
+  .section-content {
+    padding: 32px 0px;
   }
 }
 
@@ -196,6 +210,17 @@
   }
   .quick-access-products__right {
     margin-top: 48px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card--sm {
+    width: 158px;
+    height: 317px;
+  }
+  .product-card--sm img {
+    width: 100%;
+    height: 179px;
   }
 }
 
@@ -505,7 +530,6 @@
 @media (max-width: 992px) {
   .specialdeals {
     height: auto;
-    width: 720px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: 30px;
@@ -526,6 +550,12 @@
   }
   .agile-real-experiences {
     height: 326px;
+  }
+}
+
+@media (max-width: 760px) {
+  .agile-real-experiences {
+    height: 266px;
   }
 }
 
@@ -562,6 +592,19 @@
   }
   .product-card--lg img {
     height: 200px;
+  }
+}
+
+@media (max-width: 760px) {
+  .newproducts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-card--lg {
+    width: 267px;
+    height: 478px;
+  }
+  .product-card--lg img {
+    height: 356px;
   }
 }
 
