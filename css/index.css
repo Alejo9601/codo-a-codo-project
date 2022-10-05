@@ -1,12 +1,18 @@
 .img-container--homebanner {
   width: 100%;
-  height: 700px;
+  height: 72vh;
 }
 
 .img-container--homebanner img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 1170px) {
+  .img-container--homebanner {
+    height: 50vh;
+  }
 }
 
 /*Sections*/
