@@ -12,13 +12,6 @@ const handleMenuToggler = (ev) => {
 };
 
 const setMenuToglerController = () => {
-  window.addEventListener("resize", () => {
-    if (window.innerWidth() <= 580) {
-      menu.classList.add("menu--inactive");
-      return;
-    }
-    menu.classList.remove("menu--inactive");
-  });
   menuToggler.addEventListener("click", handleMenuToggler);
 };
 

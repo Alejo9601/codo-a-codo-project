@@ -161,7 +161,6 @@ h6 {
 }
 
 .menu {
-  display: flex;
   list-style: none;
   padding: 20px 0px;
 }
@@ -259,6 +258,14 @@ h6 {
   }
 }
 
+@media (min-width: 581px) {
+  .menu {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+  }
+}
+
 @media (max-width: 580px) {
   .navbar--header {
     width: 100%;
@@ -270,7 +277,6 @@ h6 {
   .menu {
     width: 100%;
     flex-direction: column;
-    display: none;
   }
   .menu-toggler {
     display: flex;
