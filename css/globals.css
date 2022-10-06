@@ -286,3 +286,28 @@ h6 {
     text-align: center;
   }
 }
+
+/** Footer **/
+@media (max-width: 1170px) {
+  .footer-info {
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-info {
+    width: 750px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-info {
+    width: 100%;
+  }
+}
+
+.footer-info {
+  width: 1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
