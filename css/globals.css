@@ -87,6 +87,54 @@ h6 {
   font-weight: bold;
 }
 
+/*Sections*/
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0px;
+}
+
+.section-content--footer {
+  padding: 64px 0px;
+}
+
+.section-title h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  top: 27%;
+  left: -65%;
+  background: var(--color-crimson);
+  height: 1px;
+  width: 55%;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: 79%;
+  right: 13%;
+  background: #212121;
+  height: 1px;
+  width: 55%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
+
+.section-content--highlighted {
+  background-color: #f3f3f3;
+}
+
 /** Styles for header, this properties will be the same in all pages 
     since header is present on each one of them.
 **/
@@ -288,9 +336,19 @@ h6 {
 }
 
 /** Footer **/
+.footer-info {
+  width: 1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/** Media Queries **/
 @media (max-width: 1170px) {
   .footer-info {
     width: 970px;
+  }
+  .section-content {
+    padding: 64px 0px;
   }
 }
 
@@ -298,16 +356,19 @@ h6 {
   .footer-info {
     width: 750px;
   }
+  .footer-info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-content {
+    padding: 48px 0px;
+  }
 }
 
 @media (max-width: 760px) {
   .footer-info {
     width: 100%;
   }
-}
-
-.footer-info {
-  width: 1170px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  .section-content {
+    padding: 32px 0px;
+  }
 }
