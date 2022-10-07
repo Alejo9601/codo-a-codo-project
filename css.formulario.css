@@ -1,0 +1,10 @@
+#derecha{
+    margin-left:600px;
+    width: 490px;
+    border: 1px;
+    height: auto; overflow: hidden;
+}
+#izquierda{
+    margin-right: 200px;
+    width: 490px;
+}
