@@ -357,6 +357,7 @@ h6 {
 
 .footer-info p {
   margin-bottom: 28px;
+  color: #999;
 }
 
 .footer-info ul {
@@ -365,6 +366,15 @@ h6 {
 
 .footer-info ul li{
   margin-bottom: 14px;
+  color: #999;
+}
+
+.web-designers {
+  padding-top: 48px;
+}
+
+.web-designers p{
+  color: #999;
 }
 
 /** Media Queries **/
