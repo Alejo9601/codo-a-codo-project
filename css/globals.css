@@ -60,6 +60,12 @@ h6 {
   font-size: 1.1rem;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: var(--color-purple);
+  border-color: var(--color-purple);
 }
 
 .product-description h5 {
