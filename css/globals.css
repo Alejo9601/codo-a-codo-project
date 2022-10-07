@@ -346,6 +346,25 @@ h6 {
   width: 1170px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-style: normal;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+  border-bottom: 2px solid var(--color-purple);
+}
+
+.footer-info p {
+  margin-bottom: 28px;
+}
+
+.footer-info ul {
+  list-style: none;
+}
+
+.footer-info ul li{
+  margin-bottom: 14px;
 }
 
 /** Media Queries **/
