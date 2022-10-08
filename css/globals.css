@@ -66,6 +66,7 @@ h6 {
 .product-card button:hover {
   background-color: var(--color-purple);
   border-color: var(--color-purple);
+  color: white;
 }
 
 .product-description h5 {
