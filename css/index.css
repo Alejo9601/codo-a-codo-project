@@ -135,7 +135,6 @@
 .product-card--sm img {
   width: 100%;
   height: 222px;
-  object-fit: contain;
 }
 
 @media (max-width: 1170px) {
