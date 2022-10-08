@@ -11,7 +11,7 @@ const productsPrices = document.querySelectorAll(
   ".new products .product-card p i"
 );
 
-const products = await getProductsForCategory("electronics", 4);
+const products = await getProductsForCategory("electronics", 4, "desc");
 
 const paintNewProducts = () => {
   paintProductsOnCards(products, productsImages, productsTitle, productsPrices);
