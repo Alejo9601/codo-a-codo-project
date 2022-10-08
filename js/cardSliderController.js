@@ -26,23 +26,22 @@ let arrayIndex = 0;
 
 const startCardSlider = () => {
   setInterval(() => {
-    profileImg.style.backgroundImage = `url(public/${realExperiences[arrayIndex].image})`;
+    profileImg.style.backgroundImage = `url(public/assets/img/${realExperiences[arrayIndex].image})`;
     profileImg.style.backgroundSize = "cover";
     comment.textContent = realExperiences[arrayIndex].comment;
-  
+
     //removing previous class asignations to dots
     paginationDots.forEach((pageDot) => {
       pageDot.classList.remove("actual-page");
     });
-  
+
     paginationDots[arrayIndex].classList.add("actual-page");
-  
+
     //Will increment de index or restore it's value to 0
     arrayIndex < realExperiences.length - 1
       ? (arrayIndex += 1)
       : (arrayIndex = 0);
   }, 5000);
-  
-}
+};
 
-export default startCardSlider; 
+export default startCardSlider;
