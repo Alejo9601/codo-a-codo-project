@@ -1,4 +1,5 @@
 import { getProductsForCategory } from "./apiCalls.js";
+import paintProductsOnCards from "./paintProductsOnCards.js";
 
 let electronicsProducts;
 let jeweleryProducts;
@@ -17,7 +18,7 @@ const getProducts = async () => {
   womensClothesProducts = await getProductsForCategory("women's clothing", 3);
 };
 
-const paintProducts = async (category) => {
+const paintQuickAccessProducts = async (category) => {
   let products;
 
   switch (category) {
@@ -37,15 +38,7 @@ const paintProducts = async (category) => {
       break;
   }
 
-  productsImages.forEach((productImg, index) => {
-    productImg.src = products[index].image;
-  });
-  productsTitle.forEach((productTitle, index) => {
-    productTitle.textContent = products[index].title.slice(0, 25);
-  });
-  productsPrices.forEach((productPrices, index) => {
-    productPrices.textContent = "$ " + products[index].price;
-  });
+  paintProductsOnCards(products, productsImages, productsTitle, productsPrices);
 };
 
 const makeActiveTab = (tab) => {
@@ -63,15 +56,17 @@ const handleTabClick = (clickedTab) => {
 
   makeActiveTab(clickedTab);
 
-  paintProducts(clickedTab.target.textContent.toLowerCase()).then(() => {
-    gridProducts.style.opacity = "1";
-    gridProducts.style.visibility = "visible";
-  });
+  paintQuickAccessProducts(clickedTab.target.textContent.toLowerCase()).then(
+    () => {
+      gridProducts.style.opacity = "1";
+      gridProducts.style.visibility = "visible";
+    }
+  );
 };
 
 const loadQuickAccessProducts = () => {
   getProducts().then(() => {
-    paintProducts("electronics");
+    paintQuickAccessProducts("electronics");
 
     tabMenuClickables.forEach((element) => {
       element.addEventListener("click", handleTabClick);

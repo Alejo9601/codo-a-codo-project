@@ -1,4 +1,5 @@
 import { getProductsForCategory } from "./apiCalls.js";
+import paintProductsOnCards from "./paintProductsOnCards.js";
 
 const productsImages = document.querySelectorAll(
   ".newproducts .product-card img"
@@ -13,15 +14,7 @@ const productsPrices = document.querySelectorAll(
 const products = await getProductsForCategory("electronics", 4);
 
 const paintNewProducts = () => {
-  productsImages.forEach((productImg, index) => {
-    productImg.src = products[index].image;
-  });
-  productsTitle.forEach((productTitle, index) => {
-    productTitle.textContent = products[index].title.slice(0, 25);
-  });
-  productsPrices.forEach((productPrices, index) => {
-    productPrices.textContent = "$ " + products[index].price;
-  });
+  paintProductsOnCards(products, productsImages, productsTitle, productsPrices);
 };
 
 export default paintNewProducts;
