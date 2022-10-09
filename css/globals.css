@@ -23,6 +23,7 @@ h4,
 h5,
 h6 {
   font-family: "Glegoo", serif;
+  font-weight: 500;
 }
 
 :root {
@@ -51,7 +52,7 @@ h6 {
   align-items: center;
 }
 
-.product-card img{
+.product-card img {
   object-fit: contain;
 }
 
@@ -370,18 +371,45 @@ h6 {
   list-style: none;
 }
 
-.footer-info ul li{
+.footer-info ul li {
   margin-bottom: 14px;
   color: #999;
+}
+
+.footer-info__frequent,
+.footer-info__categories,
+.footer-info__contact,
+.footer-info__social {
+  padding: 0px 15px;
+}
+
+.footer-info__frequent li,
+.footer-info__categories li {
   padding-left: 30px;
   background: url(../public/assets/img/arrow.png) no-repeat -6px -98px;
+}
+
+.footer-info__contact li,
+.footer-info__contact li i {
+  display: flex;
+  align-items: center;
+}
+
+.footer-info__contact li i {
+  width: 32px;
+  height: 32px;
+  border: 1px solid;
+  flex-direction: column;
+  padding-top: 2.5%;
+  margin-right: 15px;
+  color: black;
 }
 
 .web-designers {
   padding-top: 48px;
 }
 
-.web-designers p{
+.web-designers p {
   color: #999;
 }
 
