@@ -373,6 +373,8 @@ h6 {
 .footer-info ul li{
   margin-bottom: 14px;
   color: #999;
+  padding-left: 30px;
+  background: url(../public/assets/img/arrow.png) no-repeat -6px -98px;
 }
 
 .web-designers {
