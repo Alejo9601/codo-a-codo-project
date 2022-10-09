@@ -390,19 +390,41 @@ h6 {
 }
 
 .footer-info__contact li,
-.footer-info__contact li i {
+.footer-info__contact li i,
+.footer-info__social li,
+.footer-info__social li i {
   display: flex;
   align-items: center;
+}
+
+.footer-info__contact li i,
+.footer-info__social li i {
+  border: 1px solid;
+  padding-top: 2.5%;
+  margin-right: 15px;
 }
 
 .footer-info__contact li i {
   width: 32px;
   height: 32px;
-  border: 1px solid;
   flex-direction: column;
-  padding-top: 2.5%;
-  margin-right: 15px;
   color: black;
+}
+
+.footer-info__social ul {
+  display: flex;
+}
+
+.footer-info__social ul li {
+  margin-bottom: 0px;
+}
+
+.footer-info__social li i {
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  justify-content: center;
 }
 
 .web-designers {
