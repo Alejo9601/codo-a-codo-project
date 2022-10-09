@@ -357,9 +357,19 @@ h6 {
 }
 
 .footer-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 48px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.footer-info h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-bottom: 2px solid var(--color-purple);
+  width: 20%;
 }
 
 .footer-info p {
