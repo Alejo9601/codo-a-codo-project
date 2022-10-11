@@ -303,6 +303,11 @@ h6 {
   cursor: pointer;
 }
 
+.btn-cart i {
+  color: white;
+  font-size: 32px;
+}
+
 .cart__count {
   position: absolute;
   background-color: var(--color-purple);
@@ -341,9 +346,24 @@ h6 {
   display: block;
 }
 
-.btn-cart i {
+.cart__detail ul {
+  list-style: none;
+}
+
+.cart__detail ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart__detail ul li button{
+  background-color: var(--color-crimson);
   color: white;
-  font-size: 32px;
+  font-weight: bold;
+  border: 0px;
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 @media (max-width: 1170px) {
