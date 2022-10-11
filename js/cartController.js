@@ -1,28 +1,55 @@
 const productCards = document.querySelectorAll(".product-card");
+
 const cart = document.querySelector(".cart");
 const cartDetail = document.querySelector(".cart__detail");
 const cartDetailUl = document.querySelector(".cart__detail ul");
-const buttonShowCart = document.querySelector(".btn-cart");
+const cartButton = document.querySelector(".btn-cart");
+
+const countBubble = cartButton.children[1];
 
 let cartItemsCount = 0;
 
 const setProductOnCart = (product) => {
   const productDescription = product.children[1];
   let li = document.createElement("li");
+  let button = document.createElement("button")
+
+  button.textContent = "remove"
+  button.addEventListener("click", handleButtonRemoveFromCart)
+
   li.textContent = productDescription.children[0].textContent;
+  li.appendChild(button);
+
   cartDetailUl.appendChild(li)
 };
 
+const removeProductFromCart = (product) => {
+  cartDetailUl.removeChild(product)
+};
+
+const decrementItemsOnCart = () => {
+  cartItemsCount -= 1;
+
+  if (cartItemsCount <= 0) {
+    countBubble.classList.remove("visible");
+  }
+
+  countBubble.textContent = cartItemsCount;
+}
+
 const incrementItemsOnCart = () => {
   cartItemsCount += 1;
-  const btnCart = cart.children[0];
-  const countBubble = btnCart.children[1];
 
   if (cartItemsCount > 0) {
     countBubble.classList.add("visible");
   }
 
   countBubble.textContent = cartItemsCount;
+};
+
+const handleButtonRemoveFromCart = (ev) => {
+  removeProductFromCart(ev.target.parentNode);
+  decrementItemsOnCart();
 };
 
 const handleButtonAddToCart = (ev) => {
@@ -45,7 +72,7 @@ const setCartController = () => {
       handleButtonAddToCart
     );
   });
-  buttonShowCart.addEventListener("click", handleButtonShowCart);
+  cartButton.addEventListener("click", handleButtonShowCart);
 };
 
 export default setCartController;
