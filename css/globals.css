@@ -37,6 +37,13 @@ h6 {
 	font-weight: 500;
 	margin: 0px;
 	padding: 0px;
+	line-height: normal;
+}
+
+p {
+	line-height: normal;
+	margin: 0px;
+	padding: 0px;
 }
 
 :root {
