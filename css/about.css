@@ -17,12 +17,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.about-description__right img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 @media (max-width: 1170px) {
   .about-description{
     width: 970px;
@@ -50,6 +44,21 @@
     padding: 32px 0px;
   }
 }
+
+/* ABOUT-DESCRIPTION */
+.about-description__left, 
+.about-description__right{
+  padding: 0px 15px;
+}
+
+.about-description__right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OUR TEAM */
+
 
 
   /* @media (max-width: 1170px) {
