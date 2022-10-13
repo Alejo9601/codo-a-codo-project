@@ -44,12 +44,14 @@ p {
 	line-height: normal;
 	margin: 0px;
 	padding: 0px;
+	color: var(--color-paragraph)
 }
 
 :root {
 	--color-cream: #f3f3f3;
 	--color-crimson: #ff5063;
 	--color-purple: #3c43a4;
+	--color-paragraph: #999;
 }
 
 /** Styles for banner
