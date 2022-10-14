@@ -666,6 +666,9 @@ p {
 }
 
 @media (max-width: 760px) {
+	.newsletter {
+		flex-direction: column;
+	}
 	.footer-info,
 	.newsletter {
 		width: 100%;
