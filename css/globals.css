@@ -428,6 +428,21 @@ p {
 	}
 }
 
+@media (max-width: 760px) {
+	.header-container--top {
+		justify-content: space-between;
+	}
+	.login {
+		margin-left: 20px;
+	}
+	.icon-container--search {
+		margin-right: 20px;
+	}
+	.cart {
+		right: 15%;
+	}
+}
+
 @media (min-width: 581px) {
 	.menu {
 		width: 100%;
@@ -457,6 +472,7 @@ p {
 	}
 	.cart {
 		top: 20%;
+		right: 3%;
 	}
 }
 
