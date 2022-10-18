@@ -718,9 +718,6 @@ button {
    .newsletter {
       width: 970px;
    }
-   .section-content {
-      padding: 64px 0px;
-   }
 }
 
 @media (max-width: 992px) {
@@ -731,9 +728,6 @@ button {
    .footer-info {
       grid-template-columns: 1fr 1fr;
    }
-   .section-content {
-      padding: 48px 0px;
-   }
 }
 
 @media (max-width: 760px) {
@@ -743,8 +737,5 @@ button {
    .footer-info,
    .newsletter {
       width: 100%;
-   }
-   .section-content {
-      padding: 32px 0px;
    }
 }
