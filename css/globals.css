@@ -571,13 +571,19 @@ button {
 
 .newsletter__form-right button {
    background: url(../public/assets/img/arrow.png) no-repeat 20px -65px var(--color-crimson);
-   width: 70px;
+   padding: 0px 35px;
    cursor: pointer;
 }
 
 @media (max-width: 992px) {
    .newsletter__form-right {
       margin-top: 48px;
+   }
+   .newsletter__form-right input {
+      width: 300px;
+   }
+   .newsletter__form-right button {
+      background-position-x: 12px;
    }
 }
 
