@@ -245,6 +245,12 @@ button {
    }
 }
 
+@media (max-width: 580px) {
+   .section-title h2 {
+      font-size: 2rem;
+   }
+}
+
 /** Styles for header, this properties will be the same in all pages 
     since header is present on each one of them.
 **/
@@ -496,6 +502,9 @@ button {
 }
 
 @media (max-width: 580px) {
+   .logo h1 {
+      font-size: 2rem;
+   }
    .navbar--header {
       width: 100%;
       display: flex;
