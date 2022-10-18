@@ -581,59 +581,6 @@ button {
    }
 }
 
-/** Newsletter - SECTION - **/
-.section-content--newsletter {
-   padding: 48px 0px;
-   background-color: var(--color-purple);
-}
-
-.newsletter {
-   display: flex;
-   background-color: var(--color-purple);
-   justify-content: space-between;
-   align-items: center;
-   width: 1170px;
-   padding: 0px 15px;
-}
-
-.newsletter__left h3 {
-   font-size: 2rem;
-   color: white;
-}
-
-.newsletter__left p {
-   color: #bfbfbf;
-}
-
-.newsletter__form-right {
-   display: flex;
-   background-color: white;
-}
-
-.newsletter__form-right input,
-.newsletter__form-right button {
-   height: 40px;
-   outline: none;
-   border: 0px;
-}
-
-.newsletter__form-right input {
-   width: 340px;
-   padding: 0px 20px;
-}
-
-.newsletter__form-right button {
-   background: url(../public/assets/img/arrow.png) no-repeat 20px -65px var(--color-crimson);
-   width: 70px;
-   cursor: pointer;
-}
-
-@media (max-width: 992px) {
-   .newsletter__form-right {
-      margin-top: 48px;
-   }
-}
-
 /** Footer **/
 .footer-info {
    width: 1170px;
