@@ -1,16 +1,29 @@
 #derecha {
-  width: 490px;
-  border: 1px;
-  height: auto;
-  overflow: hidden;
+   width: 490px;
+   border: 1px;
+   height: auto;
+   overflow: hidden;
 }
+
 #izquierda {
-  width: 490px;
+   width: 490px;
+}
+
+.page-title {
+   width: 1170px;
+}
+
+.social-networks-container ul {
+   padding: 0px;
+   margin: 20px 50px;
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
 }
 
 .iframe-form-container {
-  display: flex; /** Get more deeper into this concept,is really usefull**/
-  flex-wrap: nowrap;
-  width: 100%; /** this container will ocupy one hundred percent of the screen**/
-  justify-content: center; /** Then we place the elements (form) and (iframe) in the center**/
+   display: flex; /** Get more deeper into this concept,is really usefull**/
+   flex-wrap: nowrap;
+   width: 100%; /** this container will ocupy one hundred percent of the screen**/
+   justify-content: center; /** Then we place the elements (form) and (iframe) in the center**/
 }
