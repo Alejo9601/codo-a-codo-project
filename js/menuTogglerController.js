@@ -15,4 +15,4 @@ const setMenuToglerController = () => {
   menuToggler.addEventListener("click", handleMenuToggler);
 };
 
-export default setMenuToglerController;
+setMenuToglerController();
