@@ -552,11 +552,11 @@
       gap: 30px 15px;
    }
    .product-card--lg {
-      width: 267px;
-      height: 478px;
+      width: 215px;
+      height: 381px;
    }
    .product-card--lg img {
-      height: 356px;
+      height: 244px;
    }
 }
 @media (max-width: 580px) {
