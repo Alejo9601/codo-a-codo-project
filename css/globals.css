@@ -280,6 +280,7 @@ button {
    align-items: center;
    line-height: 1.5;
    letter-spacing: 2px;
+   font-weight: bolder;
 }
 
 .logo h1 span {
