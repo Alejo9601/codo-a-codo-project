@@ -288,41 +288,42 @@ button {
    letter-spacing: 5px;
 }
 
-.menu-toggler {
-   width: 50px;
-   height: 50px;
-   position: relative;
-   margin-left: 10px;
-   margin-top: 10px;
-   display: none;
-   justify-content: center;
-   cursor: pointer;
-}
-
 .menu-toggler::before,
 .menu-toggler::after {
    position: absolute;
    content: "";
    display: block;
-   width: 70%;
+   width: 35px;
    height: 5px;
    background-color: white;
 }
 
 .menu-toggler::before {
-   top: 10%;
+   top: 5px;
 }
 
 .menu-toggler::after {
-   top: 50%;
+   bottom: 5px;
+}
+
+.menu-toggler {
+   width: 50px;
+   height: 40px;
+   position: relative;
+   margin: 10px 0px 10px 5px;
+   display: none;
+   justify-content: center;
+   cursor: pointer;
 }
 
 .menu-toggler span {
-   margin-top: 30%;
-   display: block;
-   width: 70%;
+   position: absolute;
+   width: 35px;
    height: 5px;
    background-color: white;
+   top: 50%;
+   left: 50%;
+   margin: -2.5px 0px 0px -17.5px;
 }
 
 .menu {
