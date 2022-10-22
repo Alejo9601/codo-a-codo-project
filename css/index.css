@@ -505,8 +505,9 @@
    .img-container--specialdeals-right {
       grid-row: auto;
    }
-   .card-carousel--profiles {
-      padding: 70px 50px;
+   .card-carousel--profiles,
+   .img-container--specialdeals-left {
+      height: 300px;
    }
 }
 
