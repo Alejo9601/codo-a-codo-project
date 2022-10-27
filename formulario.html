@@ -43,13 +43,12 @@
          src="js/menuTogglerController.js"
       ></script>
       <script type="text/javascript">
-         function validate_form ( ) {
-            const campoValidar = document.querySelector("name");
-            if ( campoValidar.value == "" ) {
-               alert ("Por favor ingrese su nombre".);
-        valid = false;
+         function validate_form() {
+            const campoValidar = document.querySelector("#name");
+            if (campoValidar.value == "") {
+               alert("Por favor ingrese su nombre");
             }
-       }  
+         }
       </script>
    </head>
    <body>
@@ -300,11 +299,11 @@
                         </div>
                      </div>
                   </div>
-                  <button 
-                     type="submit" 
+                  <button
+                     type="submit"
                      onclick="validate_form()"
                      class="btn btn-primary"
-                     >
+                  >
                      Enviar
                   </button>
                </form>
