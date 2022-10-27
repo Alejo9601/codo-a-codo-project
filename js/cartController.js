@@ -7,9 +7,6 @@ const cartButton = document.querySelector(".btn-cart");
 
 const countBubble = cartButton.children[1];
 
-// //Holds the current count of products on the cart
-// let cartItemsCount = 0;
-
 //Holds the current sum of the prices of the products in the cart
 let cartCurrentSum = 0;
 
@@ -74,7 +71,7 @@ const updateCurrentCartSum = (
 
 //Decrements the current count of products on the cart
 const decrementItemsOnCart = (productToRemove) => {
-   cart = cart.filter((cartProduct) => cartProduct.id === productToRemove.id);
+   cart = cart.filter((cartProduct) => cartProduct.id !== productToRemove.id);
 
    console.log(productToRemove.id);
 
