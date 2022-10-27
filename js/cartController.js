@@ -1,82 +1,111 @@
 //Gets all the necessary elements from the DOM
 const productCards = document.querySelectorAll(".product-card");
 
-const cart = document.querySelector(".cart");
 const cartDetail = document.querySelector(".cart__detail");
 const cartDetailUl = document.querySelector(".cart__detail ul");
 const cartButton = document.querySelector(".btn-cart");
 
 const countBubble = cartButton.children[1];
 
-//Holds the current count of products on the cart
-let cartItemsCount = 0;
+// //Holds the current count of products on the cart
+// let cartItemsCount = 0;
 
 //Holds the current sum of the prices of the products in the cart
 let cartCurrentSum = 0;
 
+let cart = [];
+
 //Adds a product to the cart
 const setProductOnCart = (product) => {
    const productDescription = product.children[1];
-   let li = document.createElement("li");
-   let button = document.createElement("button");
 
-   button.textContent = "remove";
-   button.addEventListener("click", handleButtonRemoveFromCart);
+   let productItem = document.createElement("li");
+   let btnRemoveProduct = document.createElement("button");
 
-   li.textContent = productDescription.children[0].textContent;
-   li.appendChild(button);
+   btnRemoveProduct.textContent = "remove";
+   btnRemoveProduct.addEventListener("click", handleButtonRemoveFromCart);
 
-   cartDetailUl.appendChild(li);
+   productItem.textContent = productDescription.children[0].textContent;
+   productItem.appendChild(btnRemoveProduct);
 
-   const p = productDescription.children[1];
+   productItem.setAttribute("id", `${cart.length + 1}`);
 
-   const i = p.children[1]; //Actual price
+   cartDetailUl.appendChild(productItem);
 
-   cartCurrentSum = +parseInt(i.textContent.replace("$ ", ""));
+   incrementItemsOnCart(productItem);
 
-   const sum = document.createElement("p");
-
-   sum.textContent = "$ " + cartCurrentSum;
-
-   cartDetail.appendChild(sum);
+   //updateCurrentCartSum(productDescription.children[1]);
 };
 
-//Removes the product from the cart
-const removeProductFromCart = (product) => {
-   cartDetailUl.removeChild(product);
+/**
+ * Removes the product from the cart
+ * @param {Element} ListItem
+ */
+const removeProductFromCart = (ListItem) => {
+   const product = ListItem.children[0];
+   // updateCurrentCartSum(productDescription.children[1], true);
+   cartDetailUl.removeChild(ListItem);
+
+   decrementItemsOnCart(ListItem);
+};
+
+/**
+ * Updates currentCartSum
+ * @param {Element} productPriceDescription
+ * @param {boolean} isSubstraction
+ */
+const updateCurrentCartSum = (
+   productPriceDescription,
+   isSubstraction = false
+) => {
+   const priceWithDiscountElement = productPriceDescription.children[1];
+   const priceWithDiscountValue = parseInt(
+      priceWithDiscountElement.textContent.replace("$ ", "")
+   );
+
+   isSubstraction
+      ? (cartCurrentSum = cartCurrentSum - priceWithDiscountValue)
+      : (cartCurrentSum = cartCurrentSum + priceWithDiscountValue);
+
+   const sum = document.querySelector(".cart__detail__current-sum");
+
+   sum.textContent = "$ " + cartCurrentSum;
 };
 
 //Decrements the current count of products on the cart
-const decrementItemsOnCart = () => {
-   cartItemsCount -= 1;
+const decrementItemsOnCart = (productToRemove) => {
+   cart = cart.filter((cartProduct) => cartProduct.id === productToRemove.id);
 
-   if (cartItemsCount <= 0) {
+   console.log(productToRemove.id);
+
+   if (cart.length === 0) {
       countBubble.classList.remove("visible");
    }
 
-   countBubble.textContent = cartItemsCount;
+   countBubble.textContent = cart.length;
 };
 
 //Increments the current count of products on the cart
-const incrementItemsOnCart = () => {
-   cartItemsCount += 1;
+const incrementItemsOnCart = (product) => {
+   cart.push(product);
 
-   if (cartItemsCount > 0) {
+   if (cart.length > 0) {
       countBubble.classList.add("visible");
    }
 
-   countBubble.textContent = cartItemsCount;
+   countBubble.textContent = cart.length;
+   console.log(cart);
 };
 
 //Handlers for buttons
 const handleButtonRemoveFromCart = (ev) => {
-   removeProductFromCart(ev.target.parentNode);
-   decrementItemsOnCart();
+   const product = ev.target.parentNode;
+   removeProductFromCart(product);
 };
 
 const handleButtonAddToCart = (ev) => {
-   setProductOnCart(ev.target.parentNode);
-   incrementItemsOnCart();
+   const product = ev.target.parentNode;
+   setProductOnCart(product);
 };
 
 const handleButtonShowCart = () => {
