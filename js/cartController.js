@@ -7,14 +7,25 @@ const cartButton = document.querySelector(".btn-cart");
 
 const countBubble = cartButton.children[1];
 
-//Holds the current sum of the prices of the products in the cart
-let cartCurrentSum = 0;
-
 let cart = [];
+
+//Get product Object from DOM element
+const newProductObject = (productFromDom) => {
+   const productImg = productFromDom.children[0];
+   const productDescription = productFromDom.children[1];
+   const productPrice = productDescription.children[1];
+
+   return {
+      id: cart.length + 1,
+      img: productImg.src,
+      name: productDescription.children[0].textContent,
+      price: parseInt(productPrice.children[1].textContent.replace("$ ", "")),
+   };
+};
 
 //Adds a product to the cart
 const setProductOnCart = (product) => {
-   const productDescription = product.children[1];
+   addItemsToCartArray(product);
 
    let productItem = document.createElement("li");
    let btnRemoveProduct = document.createElement("button");
@@ -22,16 +33,13 @@ const setProductOnCart = (product) => {
    btnRemoveProduct.textContent = "remove";
    btnRemoveProduct.addEventListener("click", handleButtonRemoveFromCart);
 
-   productItem.textContent = productDescription.children[0].textContent;
+   productItem.textContent = product.name;
    productItem.appendChild(btnRemoveProduct);
-
-   productItem.setAttribute("id", `${cart.length + 1}`);
+   productItem.setAttribute("id", product.id);
 
    cartDetailUl.appendChild(productItem);
 
-   incrementItemsOnCart(productItem);
-
-   //updateCurrentCartSum(productDescription.children[1]);
+   updateCurrentCartSum();
 };
 
 /**
@@ -39,39 +47,30 @@ const setProductOnCart = (product) => {
  * @param {Element} ListItem
  */
 const removeProductFromCart = (ListItem) => {
-   const product = ListItem.children[0];
-   // updateCurrentCartSum(productDescription.children[1], true);
    cartDetailUl.removeChild(ListItem);
-
-   decrementItemsOnCart(ListItem);
+   removeItemsFromCartArray(ListItem);
+   updateCurrentCartSum();
 };
 
 /**
  * Updates currentCartSum
- * @param {Element} productPriceDescription
- * @param {boolean} isSubstraction
  */
-const updateCurrentCartSum = (
-   productPriceDescription,
-   isSubstraction = false
-) => {
-   const priceWithDiscountElement = productPriceDescription.children[1];
-   const priceWithDiscountValue = parseInt(
-      priceWithDiscountElement.textContent.replace("$ ", "")
-   );
+const updateCurrentCartSum = () => {
+   const domSum = document.querySelector(".cart__detail__current-sum");
+   let auxSum = 0;
 
-   isSubstraction
-      ? (cartCurrentSum = cartCurrentSum - priceWithDiscountValue)
-      : (cartCurrentSum = cartCurrentSum + priceWithDiscountValue);
+   cart.forEach((product) => {
+      auxSum = auxSum + product.price;
+   });
 
-   const sum = document.querySelector(".cart__detail__current-sum");
-
-   sum.textContent = "$ " + cartCurrentSum;
+   domSum.textContent = "$ " + auxSum;
 };
 
 //Decrements the current count of products on the cart
-const decrementItemsOnCart = (productToRemove) => {
-   cart = cart.filter((cartProduct) => cartProduct.id !== productToRemove.id);
+const removeItemsFromCartArray = (productToRemove) => {
+   cart = cart.filter(
+      (cartProduct) => cartProduct.id !== parseInt(productToRemove.id)
+   );
 
    console.log(productToRemove.id);
 
@@ -83,7 +82,7 @@ const decrementItemsOnCart = (productToRemove) => {
 };
 
 //Increments the current count of products on the cart
-const incrementItemsOnCart = (product) => {
+const addItemsToCartArray = (product) => {
    cart.push(product);
 
    if (cart.length > 0) {
@@ -91,7 +90,6 @@ const incrementItemsOnCart = (product) => {
    }
 
    countBubble.textContent = cart.length;
-   console.log(cart);
 };
 
 //Handlers for buttons
@@ -101,7 +99,7 @@ const handleButtonRemoveFromCart = (ev) => {
 };
 
 const handleButtonAddToCart = (ev) => {
-   const product = ev.target.parentNode;
+   const product = newProductObject(ev.target.parentNode);
    setProductOnCart(product);
 };
 
