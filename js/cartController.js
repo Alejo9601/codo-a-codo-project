@@ -72,8 +72,6 @@ const removeItemsFromCartArray = (productToRemove) => {
       (cartProduct) => cartProduct.id !== parseInt(productToRemove.id)
    );
 
-   console.log(productToRemove.id);
-
    if (cart.length === 0) {
       countBubble.classList.remove("visible");
    }
