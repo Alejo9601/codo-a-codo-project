@@ -452,11 +452,9 @@ button {
 
 .cart__detail {
    position: absolute;
-   width: 300px;
-   height: 100px;
+   width: 350px;
    top: 100%;
    right: 100%;
-   overflow-y: scroll;
    background-color: white;
    border-radius: 5px;
    padding: 15px;
@@ -468,8 +466,18 @@ button {
    display: block;
 }
 
+.cart__detail__current-sum {
+   font-size: 1.2rem;
+   font-weight: bold;
+   width: 100%;
+   text-align: right;
+   margin-top: 15px;
+}
+
 .cart__detail ul {
    list-style: none;
+   height: 120px;
+   overflow-y: scroll;
 }
 
 .cart__detail ul li {
