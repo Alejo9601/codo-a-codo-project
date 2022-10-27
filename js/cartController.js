@@ -119,4 +119,4 @@ const setCartController = () => {
    cartButton.addEventListener("click", handleButtonShowCart);
 };
 
-export default setCartController;
+setCartController();
