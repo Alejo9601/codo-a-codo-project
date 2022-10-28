@@ -137,6 +137,16 @@ button {
    height: 222px;
 }
 
+.product-card--md {
+   width: 253px;
+   height: 433px;
+}
+
+.product-card--md img {
+   width: 100%;
+   height: 297px;
+}
+
 .product-card--lg {
    width: 255px;
    height: 478px;
