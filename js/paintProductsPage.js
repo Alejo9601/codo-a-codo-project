@@ -14,7 +14,6 @@ const paintProductsPage = () => {
       productsTitle,
       productsPrices
    );
-   console.log(productsImages);
 };
 
 paintProductsPage();
