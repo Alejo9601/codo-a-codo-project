@@ -109,7 +109,23 @@ const handleButtonShowCart = () => {
    cartDetail.classList.add("cart__detail--visible");
 };
 
+const animateOnScroll = () => {
+   const header = document.querySelector(".header ");
+   const headerSize = header.offsetTop;
+
+   const cartContainer = document.querySelector(".cart");
+
+   window.addEventListener("scroll", () => {
+      if (window.scrollY >= headerSize + 10) {
+         cartContainer.classList.add("cart-on-scrolling");
+      } else {
+         cartContainer.classList.remove("cart-on-scrolling");
+      }
+   });
+};
+
 const setCartController = () => {
+   animateOnScroll();
    productCards.forEach((productCard) => {
       productCard.lastElementChild.addEventListener(
          "click",
