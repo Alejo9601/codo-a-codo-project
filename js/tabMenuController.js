@@ -23,7 +23,7 @@ let allProducts = [
 
 //Gets all the necessary elements from the DOM (HTML)
 const tabMenuClickables = document.querySelectorAll(".tabmenu-item__clickable");
-const productsImages = document.querySelectorAll(".product-card--sm img");
+const productsImages = document.querySelectorAll(".product-img");
 const productsTitle = document.querySelectorAll(".product-card--sm h5");
 const productsPrices = document.querySelectorAll(".product-card--sm p i");
 
@@ -86,7 +86,14 @@ const handleTabClick = (clickedTab) => {
 const loadQuickAccessProducts = () => {
    getProducts().then(() => {
       //Just for the first paint
-      paintQuickAccessProducts("electronics");
+      paintQuickAccessProducts("electronics").then(() => {
+         //Removing loader spinners
+         let loaders = document.querySelectorAll(".loader");
+
+         loaders.forEach((loader) => {
+            loader.classList.remove("loader--active");
+         });
+      });
 
       //Adding the onclick listener for each tab
       tabMenuClickables.forEach((element) => {

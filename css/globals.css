@@ -60,6 +60,45 @@ button {
    --color-light-purple: rgb(118, 156, 213);
 }
 
+/*
+*   Image container
+*/
+.image-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.image-container__sm {
+   height: 244px;
+   width: 196px;
+}
+
+/* Loader spinner
+* 
+*/
+@keyframes spinner {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.loader {
+   position: absolute;
+   display: none;
+   height: 64px;
+   width: 64px;
+   background-image: url("../public/assets/img/loading.png");
+   animation: spinner infinite ease 1s;
+}
+
+.loader--active {
+   display: inline;
+}
 /** Styles for banner
     Can change it´s properties depending on the page it is used
 **/
